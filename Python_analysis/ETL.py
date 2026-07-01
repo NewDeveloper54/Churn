@@ -7,7 +7,7 @@ from pathlib import Path
 # Charger le Dataset
 script_dir = Path(__file__).resolve().parent
 
-chemin = script_dir.parent / "Dataset" / "telco_customer_churn.xlsx"
+chemin = script_dir.parent / "Dataset" / "Telco_customer_churn.xlsx"
 
 df = pd.read_excel(chemin)
 df.head()
@@ -17,7 +17,6 @@ df.columns.tolist()
 df.isna().sum()
 
 df.info()
-df.shape
 
 #Préparation des données 
 df_churn = df.drop(columns=['Count', 'Country', 'State', 'Lat Long','Churn Label'], axis=1)

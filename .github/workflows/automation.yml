@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pandas numpy kaggle matplotlib seaborn scikit-learn
+        pip install pandas numpy kaggle matplotlib seaborn scikit-learn openpyxl
 
     # Connexion à Kaggle et téléchargement du dataset
     - name: Download latest data from Kaggle
@@ -31,7 +31,7 @@ jobs:
         KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
         KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
       run: |
-        kaggle datasets download -d yeanzc/telco-customer-churn-ibm-dataset --unzip -p data/
+        kaggle datasets download -d yeanzc/telco-customer-churn-ibm-dataset --unzip -p Dataset/
 
 
     # Lancement de l'ETL et le ML

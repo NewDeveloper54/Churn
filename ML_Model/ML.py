@@ -12,7 +12,6 @@ from sklearn.metrics import confusion_matrix
 # Charger le Dataset nettoyé
 df = pd.read_csv("Telco_customer_churn_clean.csv")
 df.head()
-df.shape()
 
 df.columns.tolist()
 
